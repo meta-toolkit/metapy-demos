@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <title>MeTA NLP Demo</title>
+    <link href="css/sticky-footer.css" rel="stylesheet">
+    <link href="css/dataTables.css" rel="stylesheet">
+    <link href="css/tree.css" rel="stylesheet">
+    <link href="css/tagged-text.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="page-header">
+        <h1><a href="#">MeTA NLP Demo</a>
+            <!--<small></small>-->
+        </h1>
+      </div>
+    </div>
+    <div class="container-fluid" id="inputTextContainer">
+      <textarea id="inputText" class="form-control" rows="7"
+          placeholder="Type or paste some text here..."></textarea>
+      <br/>
+      <button type="button" class="btn btn-primary btn-lg center-block"
+          id="analyzeButton">Analyze!</button>
+    </div>
+    <div class="container-fluid" id="analyzerOutput">
+      <div class="container-fluid" id="processedText">
+        <table class="table table-bordered" id="sentenceList">
+          <thead>
+            <tr>
+              <td>&nbsp;</td>
+              <td><strong>Sentence</strong></td>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">
+          Powered by <a href="https://meta-toolkit.org/">MeTA</a>
+          |
+          Source <a href="https://github.com/meta-toolkit/nlp-demo">available on
+              GitHub</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="javascript/handlebars.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="javascript/bootstrap.min.js"></script>
+    <script src="javascript/dataTables.js"></script>
+    <script src="javascript/dataTablesBootstrap.js"></script>
+    <script src="javascript/index.js"></script>
+    <script id="observation" type="x-handlebars-template">
+    <li class="tagged-text chunk {{label}}">
+      <span class="tag">{{tag}}</span>
+      <div class="curly-brace">
+        <div class="left brace"></div>
+        <div class="right brace"></div>
+      </div>
+      <ul>
+        <li>{{word}}</li>
+      </ul>
+    </li>
+    </script>
+    <script id="tagged-text" type="x-handlebars-template">
+    <ul class="tagged-text clearfix">
+      {{#observations}}
+      {{> observation}}
+      {{/observations}}
+    </ul>
+    </script>
+    <script id="treenode" type="x-handlebars-template">
+    {{#if children}}
+    <li class="{{label}}">
+      <span class="tag">{{tag}}</span>
+      <ul>
+        {{#each children}}
+        {{> treenode}}
+        {{/each}}
+      </ul>
+    </li>
+    {{else}}
+    {{> observation}}
+    {{/if}}
+    </script>
+    <script id="parse-tree" type="x-handlebars-template">
+    <div class="tree">
+      <ul class="clearfix">
+        {{> treenode }}
+      </ul>
+    </div>
+    </script>
+  </body>
+</html>

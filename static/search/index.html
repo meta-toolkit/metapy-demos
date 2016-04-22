@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>MeTA Search</title>
+  <link href="css/custom.css" rel="stylesheet"/>
+  <link href="css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="page-header text-center">
+      <h1><a href="#">Search</a>
+      </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class="input-group">
+        <div class="input-group-btn search-panel">
+          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            <span id="search_concept">Okapi BM25</span>
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li id="OkapiBM25"><a href="#">Okapi BM25</a></li>
+            <li id="PivotedLength"><a href="#">Pivoted Length Normalization</a></li>
+            <li id="DirichletPrior"><a href="#">Dirichlet Prior Smoothing</a></li>
+            <li id="JelinekMercer"><a href="#">Jelinek-Mercer Smoothing</a></li>
+            <li id="AbsoluteDiscount"><a href="#">Absolute Discount Smoothing</a></li>
+          </ul>
+        </div>
+        <input type="hidden" name="search_param" value="all" id="search_param">
+        <input type="text" class="form-control" placeholder="Enter a query..." id="query_text">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button" id="search_button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="container" id="search_results">
+        <ul id="search_results_list">
+        </ul>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted">
+        Powered by <a href="https://meta-toolkit.org/">MeTA</a>
+      </p>
+    </div>
+  </footer>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="javascript/bootstrap.min.js"></script>
+<script src="javascript/index.js"></script>
+</html>

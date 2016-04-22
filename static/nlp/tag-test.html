@@ -1,0 +1,220 @@
+<DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <title>MeTA NLP Demo</title>
+    <link href="css/sticky-footer.css" rel="stylesheet">
+    <link href="css/dataTables.css" rel="stylesheet">
+    <link href="css/tagged-text.css" rel="stylesheet">
+    <link href="css/tree.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="page-header">
+        <h1><a href="#">MeTA NLP Demo</a>
+            <!--<small></small>-->
+        </h1>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="tree">
+        <ul>
+          <li class="label_PUNCT">
+            <span class="tag">S</span>
+            <ul>
+              <li class="label_NNP">
+                <span class="tag">NP</span>
+                <ul class="tagged-text">
+                  <li class="chunk label_DT">
+                    <span class="tag">DT</span>
+                    <div class="curly-brace">
+                      <div class="left brace"></div>
+                      <div class="right brace"></div>
+                    </div>
+                    <ul>
+                      <li>The</li>
+                    </ul>
+                  </li>
+                  <li class="chunk label_NNP">
+                    <span class="tag">NNP</span>
+                    <div class="curly-brace">
+                      <div class="left brace"></div>
+                      <div class="right brace"></div>
+                    </div>
+                    <ul>
+                      <li>Chicago</li>
+                    </ul>
+                  </li>
+                  <li class="chunk label_NNP">
+                    <span class="tag">NNP</span>
+                    <div class="curly-brace">
+                      <div class="left brace"></div>
+                      <div class="right brace"></div>
+                    </div>
+                    <ul>
+                      <li>Cubs</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="label_VBD">
+                <span class="tag">VP</span>
+                <ul>
+                  <li class="tagged-text chunk label_VBD">
+                    <span class="tag">VBD</span>
+                    <div class="curly-brace">
+                      <div class="left brace"></div>
+                      <div class="right brace"></div>
+                    </div>
+                    <ul>
+                      <li>won</li>
+                    </ul>
+                  </li>
+                  <li class="label_NNP">
+                    <span class="tag">NP</span>
+                    <ul class="tagged-text">
+                      <li class="chunk label_DT">
+                        <span class="tag">DT</span>
+                        <div class="curly-brace">
+                          <div class="left brace"></div>
+                          <div class="right brace"></div>
+                        </div>
+                        <ul>
+                          <li>the</li>
+                        </ul>
+                      </li>
+                      <li class="chunk label_NNP">
+                        <span class="tag">NNP</span>
+                        <div class="curly-brace">
+                          <div class="left brace"></div>
+                          <div class="right brace"></div>
+                        </div>
+                        <ul>
+                          <li>World</li>
+                        </ul>
+                      </li>
+                      <li class="chunk label_NNP">
+                        <span class="tag">NNP</span>
+                        <div class="curly-brace">
+                          <div class="left brace"></div>
+                          <div class="right brace"></div>
+                        </div>
+                        <ul>
+                          <li>Series</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="tagged-text label_PUNCT">
+                <span class="tag">.</span>
+                <div class="curly-brace">
+                  <div class="left brace"></div>
+                  <div class="right brace"></div>
+                </div>
+                <ul>
+                  <li>.</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div>
+        <ul class="tagged-text">
+          <li class="chunk label_DT">
+            <span class="tag">DT</span>
+            <div class="curly-brace">
+              <div class="left brace"></div>
+              <div class="right brace"></div>
+            </div>
+            <ul>
+              <li>The</li>
+            </ul>
+          </li>
+          <li class="chunk label_NNP">
+            <span class="tag">ORG</span>
+            <div class="curly-brace">
+              <div class="left brace"></div>
+              <div class="right brace"></div>
+            </div>
+            <ul>
+              <li>Chicago</li>
+              <li>Cubs</li>
+            </ul>
+          </li>
+          <li class="chunk label_VBD">
+            <span class="tag">VBD</span>
+            <div class="curly-brace">
+              <div class="left brace"></div>
+              <div class="right brace"></div>
+            </div>
+            <ul>
+              <li><span class="word">won</span></li>
+            </ul>
+          </li>
+          <li class="chunk label_DT">
+            <span class="tag">DT</span>
+            <div class="curly-brace">
+              <div class="left brace"></div>
+              <div class="right brace"></div>
+            </div>
+            <ul>
+              <li><span class="word">the</span></li>
+            </ul>
+          </li>
+          <li class="chunk label_NNP">
+            <span class="tag">NNP</span>
+            <div class="curly-brace">
+              <div class="left brace"></div>
+              <div class="right brace"></div>
+            </div>
+            <ul>
+              <li><span class="word">World</span></li>
+            </ul>
+          </li>
+          <li class="chunk label_NNP">
+            <span class="tag">NNP</span>
+            <div class="curly-brace">
+              <div class="left brace"></div>
+              <div class="right brace"></div>
+            </div>
+            <ul>
+              <li><span class="word">Series</span></li>
+            </ul>
+          </li>
+          <li class="chunk label_PUNCT">
+            <span class="tag">.</span>
+            <div class="curly-brace">
+              <div class="left brace"></div>
+              <div class="right brace"></div>
+            </div>
+            <ul>
+              <li><span class="word">.</span></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">
+          Powered by <a href="https://meta-toolkit.org/">MeTA</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="javascript/bootstrap.min.js"></script>
+  <script src="javascript/dataTables.js"></script>
+  <script src="javascript/dataTablesBootstrap.js"></script>
+  <script src="javascript/index.js"></script>
+</html>

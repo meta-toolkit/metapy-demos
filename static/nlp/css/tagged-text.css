@@ -1,0 +1,430 @@
+.tree .tagged-text ul {
+  padding: 0;
+  position: relative;
+  margin: 0; }
+.tree .tagged-text > li, .tree li.tagged-text {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 5px 0 5px;
+  min-width: 25px;
+  margin: 0; }
+.tree .tagged-text li span.tag, .tree li.tagged-text span.tag {
+  border-width: 1px;
+  border-style: solid;
+  padding: 5px 5px;
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 11px;
+  color: #000; }
+.tree .tagged-text > li:only-child, .tree li.tagged-text:only-child {
+  padding: 0 5px; }
+
+.tagged-text ul, ul.tagged-text {
+  padding: 0;
+  position: relative;
+  margin: 0; }
+
+.tagged-text li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 0;
+  min-width: 25px;
+  margin: 0 2px; }
+
+ul.tagged-text > li:before, ul.tagged-text > li:after {
+  display: block; }
+
+.tagged-text ul:before, .tagged-text ul:after, .tagged-text li:before,
+.tagged-text li:after {
+  display: none; }
+
+.tagged-text li.chunk li {
+  margin: 2px 0;
+  padding: 0 0 0 5px; }
+
+.tagged-text li.chunk li:last-child {
+  padding: 0 5px; }
+
+.tagged-text li.chunk li:only-child {
+  padding: 0 5px; }
+
+.tagged-text li span.tag {
+  border-width: 1px;
+  border-style: solid;
+  padding: 2px 5px;
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 11px; }
+
+div.curly-brace + ul li:only-child {
+  width: 100%;
+  margin-left: 0; }
+
+div.curly-brace {
+  width: 100%;
+  position: relative; }
+
+div.brace {
+  border-bottom: 2px solid;
+  margin: -5px 20% 0 20%;
+  width: 10%;
+  height: 10px;
+  float: left; }
+
+div.brace:before, div.brace:after {
+  content: "";
+  width: 20%;
+  height: 20px;
+  position: absolute;
+  display: block; }
+
+div.brace.right:before {
+  border-bottom: 2px solid;
+  border-bottom-left-radius: 6px;
+  margin-left: -20%;
+  margin-top: -10px; }
+
+div.brace.right:after {
+  border-top: 2px solid;
+  border-top-right-radius: 6px;
+  margin-left: 10%;
+  margin-top: 8px; }
+
+div.brace.left:before {
+  border-top: 2px solid;
+  border-top-left-radius: 6px;
+  margin-left: -20%;
+  margin-top: 8px; }
+
+div.brace.left:after {
+  border-bottom: 2px solid;
+  border-bottom-right-radius: 6px;
+  margin-left: 10%;
+  margin-top: -10px; }
+
+/*
+ * Colors taken from brat CoreNLP configuration
+ * see: https://github.com/nlplab/brat/blob/master/configurations/Stanford-CoreNLP/visual.conf
+ */
+/*
+ * Coordination and Punctuation, Clauses
+ */
+.label_CC > span.tag, .label_PUNCT > span.tag, .label_S > span.tag, .label_SBAR > span.tag, .label_SBARQ > span.tag, .label_SINV > span.tag,
+.label_SQ > span.tag, .label_FRAG > span.tag, .label_LST > span.tag, .label_PRN > span.tag, .label_RRC > span.tag, .label_UCP > span.tag,
+.label_X > span.tag, .label_ROOT > span.tag {
+  color: #000;
+  background: #e3e3e3;
+  border-color: #7d7d7d; }
+.label_CC > div.curly-brace + ul li, .label_PUNCT > div.curly-brace + ul li, .label_S > div.curly-brace + ul li, .label_SBAR > div.curly-brace + ul li, .label_SBARQ > div.curly-brace + ul li, .label_SINV > div.curly-brace + ul li,
+.label_SQ > div.curly-brace + ul li, .label_FRAG > div.curly-brace + ul li, .label_LST > div.curly-brace + ul li, .label_PRN > div.curly-brace + ul li, .label_RRC > div.curly-brace + ul li, .label_UCP > div.curly-brace + ul li,
+.label_X > div.curly-brace + ul li, .label_ROOT > div.curly-brace + ul li {
+  background: rgba(227, 227, 227, 0.4); }
+.label_CC > div.curly-brace, .label_PUNCT > div.curly-brace, .label_S > div.curly-brace, .label_SBAR > div.curly-brace, .label_SBARQ > div.curly-brace, .label_SINV > div.curly-brace,
+.label_SQ > div.curly-brace, .label_FRAG > div.curly-brace, .label_LST > div.curly-brace, .label_PRN > div.curly-brace, .label_RRC > div.curly-brace, .label_UCP > div.curly-brace,
+.label_X > div.curly-brace, .label_ROOT > div.curly-brace {
+  color: #7d7d7d; }
+ul.tagged-text .label_CC:hover > span.tag, .label_CC.tagged-text:hover > span.tag, ul.tagged-text .label_PUNCT:hover > span.tag, .label_PUNCT.tagged-text:hover > span.tag, ul.tagged-text .label_S:hover > span.tag, .label_S.tagged-text:hover > span.tag, ul.tagged-text .label_SBAR:hover > span.tag, .label_SBAR.tagged-text:hover > span.tag, ul.tagged-text .label_SBARQ:hover > span.tag, .label_SBARQ.tagged-text:hover > span.tag, ul.tagged-text .label_SINV:hover > span.tag, .label_SINV.tagged-text:hover > span.tag, ul.tagged-text
+.label_SQ:hover > span.tag,
+.label_SQ.tagged-text:hover > span.tag, ul.tagged-text .label_FRAG:hover > span.tag, .label_FRAG.tagged-text:hover > span.tag, ul.tagged-text .label_LST:hover > span.tag, .label_LST.tagged-text:hover > span.tag, ul.tagged-text .label_PRN:hover > span.tag, .label_PRN.tagged-text:hover > span.tag, ul.tagged-text .label_RRC:hover > span.tag, .label_RRC.tagged-text:hover > span.tag, ul.tagged-text .label_UCP:hover > span.tag, .label_UCP.tagged-text:hover > span.tag, ul.tagged-text
+.label_X:hover > span.tag,
+.label_X.tagged-text:hover > span.tag, ul.tagged-text .label_ROOT:hover > span.tag, .label_ROOT.tagged-text:hover > span.tag {
+  background: #cacaca;
+  border-color: #4a4a4a; }
+ul.tagged-text .label_CC:hover > div.curly-brace + ul li, .label_CC.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_PUNCT:hover > div.curly-brace + ul li, .label_PUNCT.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_S:hover > div.curly-brace + ul li, .label_S.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_SBAR:hover > div.curly-brace + ul li, .label_SBAR.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_SBARQ:hover > div.curly-brace + ul li, .label_SBARQ.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_SINV:hover > div.curly-brace + ul li, .label_SINV.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text
+.label_SQ:hover > div.curly-brace + ul li,
+.label_SQ.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_FRAG:hover > div.curly-brace + ul li, .label_FRAG.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_LST:hover > div.curly-brace + ul li, .label_LST.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_PRN:hover > div.curly-brace + ul li, .label_PRN.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_RRC:hover > div.curly-brace + ul li, .label_RRC.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_UCP:hover > div.curly-brace + ul li, .label_UCP.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text
+.label_X:hover > div.curly-brace + ul li,
+.label_X.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_ROOT:hover > div.curly-brace + ul li, .label_ROOT.tagged-text:hover > div.curly-brace + ul li {
+  background: rgba(227, 227, 227, 0.6); }
+ul.tagged-text .label_CC:hover > div.curly-brace, .label_CC.tagged-text:hover > div.curly-brace, ul.tagged-text .label_PUNCT:hover > div.curly-brace, .label_PUNCT.tagged-text:hover > div.curly-brace, ul.tagged-text .label_S:hover > div.curly-brace, .label_S.tagged-text:hover > div.curly-brace, ul.tagged-text .label_SBAR:hover > div.curly-brace, .label_SBAR.tagged-text:hover > div.curly-brace, ul.tagged-text .label_SBARQ:hover > div.curly-brace, .label_SBARQ.tagged-text:hover > div.curly-brace, ul.tagged-text .label_SINV:hover > div.curly-brace, .label_SINV.tagged-text:hover > div.curly-brace, ul.tagged-text
+.label_SQ:hover > div.curly-brace,
+.label_SQ.tagged-text:hover > div.curly-brace, ul.tagged-text .label_FRAG:hover > div.curly-brace, .label_FRAG.tagged-text:hover > div.curly-brace, ul.tagged-text .label_LST:hover > div.curly-brace, .label_LST.tagged-text:hover > div.curly-brace, ul.tagged-text .label_PRN:hover > div.curly-brace, .label_PRN.tagged-text:hover > div.curly-brace, ul.tagged-text .label_RRC:hover > div.curly-brace, .label_RRC.tagged-text:hover > div.curly-brace, ul.tagged-text .label_UCP:hover > div.curly-brace, .label_UCP.tagged-text:hover > div.curly-brace, ul.tagged-text
+.label_X:hover > div.curly-brace,
+.label_X.tagged-text:hover > div.curly-brace, ul.tagged-text .label_ROOT:hover > div.curly-brace, .label_ROOT.tagged-text:hover > div.curly-brace {
+  color: #707070; }
+.label_CC > span.tag:hover, .label_PUNCT > span.tag:hover, .label_S > span.tag:hover, .label_SBAR > span.tag:hover, .label_SBARQ > span.tag:hover, .label_SINV > span.tag:hover,
+.label_SQ > span.tag:hover, .label_FRAG > span.tag:hover, .label_LST > span.tag:hover, .label_PRN > span.tag:hover, .label_RRC > span.tag:hover, .label_UCP > span.tag:hover,
+.label_X > span.tag:hover, .label_ROOT > span.tag:hover {
+  background: #d6d6d6;
+  border-color: #4a4a4a; }
+
+/*
+ * Adjectives and adverbs
+ */
+.label_JJ > span.tag, .label_JJR > span.tag, .label_JJS > span.tag, .label_RB > span.tag, .label_RBR > span.tag, .label_RBS > span.tag,
+.label_WRB > span.tag, .label_ADJP > span.tag, .label_ADVP > span.tag, .label_WHADJP > span.tag, .label_WHADVP > span.tag {
+  color: #000;
+  background: #fffda8;
+  border-color: #dbd600; }
+.label_JJ > div.curly-brace + ul li, .label_JJR > div.curly-brace + ul li, .label_JJS > div.curly-brace + ul li, .label_RB > div.curly-brace + ul li, .label_RBR > div.curly-brace + ul li, .label_RBS > div.curly-brace + ul li,
+.label_WRB > div.curly-brace + ul li, .label_ADJP > div.curly-brace + ul li, .label_ADVP > div.curly-brace + ul li, .label_WHADJP > div.curly-brace + ul li, .label_WHADVP > div.curly-brace + ul li {
+  background: rgba(255, 253, 168, 0.4); }
+.label_JJ > div.curly-brace, .label_JJR > div.curly-brace, .label_JJS > div.curly-brace, .label_RB > div.curly-brace, .label_RBR > div.curly-brace, .label_RBS > div.curly-brace,
+.label_WRB > div.curly-brace, .label_ADJP > div.curly-brace, .label_ADVP > div.curly-brace, .label_WHADJP > div.curly-brace, .label_WHADVP > div.curly-brace {
+  color: #dbd600; }
+ul.tagged-text .label_JJ:hover > span.tag, .label_JJ.tagged-text:hover > span.tag, ul.tagged-text .label_JJR:hover > span.tag, .label_JJR.tagged-text:hover > span.tag, ul.tagged-text .label_JJS:hover > span.tag, .label_JJS.tagged-text:hover > span.tag, ul.tagged-text .label_RB:hover > span.tag, .label_RB.tagged-text:hover > span.tag, ul.tagged-text .label_RBR:hover > span.tag, .label_RBR.tagged-text:hover > span.tag, ul.tagged-text .label_RBS:hover > span.tag, .label_RBS.tagged-text:hover > span.tag, ul.tagged-text
+.label_WRB:hover > span.tag,
+.label_WRB.tagged-text:hover > span.tag, ul.tagged-text .label_ADJP:hover > span.tag, .label_ADJP.tagged-text:hover > span.tag, ul.tagged-text .label_ADVP:hover > span.tag, .label_ADVP.tagged-text:hover > span.tag, ul.tagged-text .label_WHADJP:hover > span.tag, .label_WHADJP.tagged-text:hover > span.tag, ul.tagged-text .label_WHADVP:hover > span.tag, .label_WHADVP.tagged-text:hover > span.tag {
+  background: #fffc75;
+  border-color: #757200; }
+ul.tagged-text .label_JJ:hover > div.curly-brace + ul li, .label_JJ.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_JJR:hover > div.curly-brace + ul li, .label_JJR.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_JJS:hover > div.curly-brace + ul li, .label_JJS.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_RB:hover > div.curly-brace + ul li, .label_RB.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_RBR:hover > div.curly-brace + ul li, .label_RBR.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_RBS:hover > div.curly-brace + ul li, .label_RBS.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text
+.label_WRB:hover > div.curly-brace + ul li,
+.label_WRB.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_ADJP:hover > div.curly-brace + ul li, .label_ADJP.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_ADVP:hover > div.curly-brace + ul li, .label_ADVP.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_WHADJP:hover > div.curly-brace + ul li, .label_WHADJP.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_WHADVP:hover > div.curly-brace + ul li, .label_WHADVP.tagged-text:hover > div.curly-brace + ul li {
+  background: rgba(255, 253, 168, 0.6); }
+ul.tagged-text .label_JJ:hover > div.curly-brace, .label_JJ.tagged-text:hover > div.curly-brace, ul.tagged-text .label_JJR:hover > div.curly-brace, .label_JJR.tagged-text:hover > div.curly-brace, ul.tagged-text .label_JJS:hover > div.curly-brace, .label_JJS.tagged-text:hover > div.curly-brace, ul.tagged-text .label_RB:hover > div.curly-brace, .label_RB.tagged-text:hover > div.curly-brace, ul.tagged-text .label_RBR:hover > div.curly-brace, .label_RBR.tagged-text:hover > div.curly-brace, ul.tagged-text .label_RBS:hover > div.curly-brace, .label_RBS.tagged-text:hover > div.curly-brace, ul.tagged-text
+.label_WRB:hover > div.curly-brace,
+.label_WRB.tagged-text:hover > div.curly-brace, ul.tagged-text .label_ADJP:hover > div.curly-brace, .label_ADJP.tagged-text:hover > div.curly-brace, ul.tagged-text .label_ADVP:hover > div.curly-brace, .label_ADVP.tagged-text:hover > div.curly-brace, ul.tagged-text .label_WHADJP:hover > div.curly-brace, .label_WHADJP.tagged-text:hover > div.curly-brace, ul.tagged-text .label_WHADVP:hover > div.curly-brace, .label_WHADVP.tagged-text:hover > div.curly-brace {
+  color: #c2bd00; }
+.label_JJ > span.tag:hover, .label_JJR > span.tag:hover, .label_JJS > span.tag:hover, .label_RB > span.tag:hover, .label_RBR > span.tag:hover, .label_RBS > span.tag:hover,
+.label_WRB > span.tag:hover, .label_ADJP > span.tag:hover, .label_ADVP > span.tag:hover, .label_WHADJP > span.tag:hover, .label_WHADVP > span.tag:hover {
+  background: #fffc8f;
+  border-color: #757200; }
+
+/*
+ * Determiners, numbers, pronouns
+ */
+.label_DT > span.tag, .label_PDT > span.tag, .label_WDT > span.tag, .label_CD > span.tag, .label_PRP > span.tag, .label_PRPDOLLAR > span.tag,
+.label_WP > span.tag, .label_WPDOLLAR > span.tag {
+  color: #000;
+  background: #ccadf6;
+  border-color: #5f15c2; }
+.label_DT > div.curly-brace + ul li, .label_PDT > div.curly-brace + ul li, .label_WDT > div.curly-brace + ul li, .label_CD > div.curly-brace + ul li, .label_PRP > div.curly-brace + ul li, .label_PRPDOLLAR > div.curly-brace + ul li,
+.label_WP > div.curly-brace + ul li, .label_WPDOLLAR > div.curly-brace + ul li {
+  background: rgba(204, 173, 246, 0.4); }
+.label_DT > div.curly-brace, .label_PDT > div.curly-brace, .label_WDT > div.curly-brace, .label_CD > div.curly-brace, .label_PRP > div.curly-brace, .label_PRPDOLLAR > div.curly-brace,
+.label_WP > div.curly-brace, .label_WPDOLLAR > div.curly-brace {
+  color: #5f15c2; }
+ul.tagged-text .label_DT:hover > span.tag, .label_DT.tagged-text:hover > span.tag, ul.tagged-text .label_PDT:hover > span.tag, .label_PDT.tagged-text:hover > span.tag, ul.tagged-text .label_WDT:hover > span.tag, .label_WDT.tagged-text:hover > span.tag, ul.tagged-text .label_CD:hover > span.tag, .label_CD.tagged-text:hover > span.tag, ul.tagged-text .label_PRP:hover > span.tag, .label_PRP.tagged-text:hover > span.tag, ul.tagged-text .label_PRPDOLLAR:hover > span.tag, .label_PRPDOLLAR.tagged-text:hover > span.tag, ul.tagged-text
+.label_WP:hover > span.tag,
+.label_WP.tagged-text:hover > span.tag, ul.tagged-text .label_WPDOLLAR:hover > span.tag, .label_WPDOLLAR.tagged-text:hover > span.tag {
+  background: #af7ff1;
+  border-color: #320b66; }
+ul.tagged-text .label_DT:hover > div.curly-brace + ul li, .label_DT.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_PDT:hover > div.curly-brace + ul li, .label_PDT.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_WDT:hover > div.curly-brace + ul li, .label_WDT.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_CD:hover > div.curly-brace + ul li, .label_CD.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_PRP:hover > div.curly-brace + ul li, .label_PRP.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_PRPDOLLAR:hover > div.curly-brace + ul li, .label_PRPDOLLAR.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text
+.label_WP:hover > div.curly-brace + ul li,
+.label_WP.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_WPDOLLAR:hover > div.curly-brace + ul li, .label_WPDOLLAR.tagged-text:hover > div.curly-brace + ul li {
+  background: rgba(204, 173, 246, 0.6); }
+ul.tagged-text .label_DT:hover > div.curly-brace, .label_DT.tagged-text:hover > div.curly-brace, ul.tagged-text .label_PDT:hover > div.curly-brace, .label_PDT.tagged-text:hover > div.curly-brace, ul.tagged-text .label_WDT:hover > div.curly-brace, .label_WDT.tagged-text:hover > div.curly-brace, ul.tagged-text .label_CD:hover > div.curly-brace, .label_CD.tagged-text:hover > div.curly-brace, ul.tagged-text .label_PRP:hover > div.curly-brace, .label_PRP.tagged-text:hover > div.curly-brace, ul.tagged-text .label_PRPDOLLAR:hover > div.curly-brace, .label_PRPDOLLAR.tagged-text:hover > div.curly-brace, ul.tagged-text
+.label_WP:hover > div.curly-brace,
+.label_WP.tagged-text:hover > div.curly-brace, ul.tagged-text .label_WPDOLLAR:hover > div.curly-brace, .label_WPDOLLAR.tagged-text:hover > div.curly-brace {
+  color: #5313ab; }
+.label_DT > span.tag:hover, .label_PDT > span.tag:hover, .label_WDT > span.tag:hover, .label_CD > span.tag:hover, .label_PRP > span.tag:hover, .label_PRPDOLLAR > span.tag:hover,
+.label_WP > span.tag:hover, .label_WPDOLLAR > span.tag:hover {
+  background: #be96f3;
+  border-color: #320b66; }
+
+/*
+ * Nouns, noun phrases
+ */
+.label_NN > span.tag, .label_NNP > span.tag, .label_NNPS > span.tag, .label_NNS > span.tag, .label_NP > span.tag, .label_NX > span.tag,
+.label_QP > span.tag, .label_WHNP > span.tag {
+  color: #000;
+  background: #a4bced;
+  border-color: #214ca4; }
+.label_NN > div.curly-brace + ul li, .label_NNP > div.curly-brace + ul li, .label_NNPS > div.curly-brace + ul li, .label_NNS > div.curly-brace + ul li, .label_NP > div.curly-brace + ul li, .label_NX > div.curly-brace + ul li,
+.label_QP > div.curly-brace + ul li, .label_WHNP > div.curly-brace + ul li {
+  background: rgba(164, 188, 237, 0.4); }
+.label_NN > div.curly-brace, .label_NNP > div.curly-brace, .label_NNPS > div.curly-brace, .label_NNS > div.curly-brace, .label_NP > div.curly-brace, .label_NX > div.curly-brace,
+.label_QP > div.curly-brace, .label_WHNP > div.curly-brace {
+  color: #214ca4; }
+ul.tagged-text .label_NN:hover > span.tag, .label_NN.tagged-text:hover > span.tag, ul.tagged-text .label_NNP:hover > span.tag, .label_NNP.tagged-text:hover > span.tag, ul.tagged-text .label_NNPS:hover > span.tag, .label_NNPS.tagged-text:hover > span.tag, ul.tagged-text .label_NNS:hover > span.tag, .label_NNS.tagged-text:hover > span.tag, ul.tagged-text .label_NP:hover > span.tag, .label_NP.tagged-text:hover > span.tag, ul.tagged-text .label_NX:hover > span.tag, .label_NX.tagged-text:hover > span.tag, ul.tagged-text
+.label_QP:hover > span.tag,
+.label_QP.tagged-text:hover > span.tag, ul.tagged-text .label_WHNP:hover > span.tag, .label_WHNP.tagged-text:hover > span.tag {
+  background: #799de5;
+  border-color: #10254f; }
+ul.tagged-text .label_NN:hover > div.curly-brace + ul li, .label_NN.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_NNP:hover > div.curly-brace + ul li, .label_NNP.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_NNPS:hover > div.curly-brace + ul li, .label_NNPS.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_NNS:hover > div.curly-brace + ul li, .label_NNS.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_NP:hover > div.curly-brace + ul li, .label_NP.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_NX:hover > div.curly-brace + ul li, .label_NX.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text
+.label_QP:hover > div.curly-brace + ul li,
+.label_QP.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_WHNP:hover > div.curly-brace + ul li, .label_WHNP.tagged-text:hover > div.curly-brace + ul li {
+  background: rgba(164, 188, 237, 0.6); }
+ul.tagged-text .label_NN:hover > div.curly-brace, .label_NN.tagged-text:hover > div.curly-brace, ul.tagged-text .label_NNP:hover > div.curly-brace, .label_NNP.tagged-text:hover > div.curly-brace, ul.tagged-text .label_NNPS:hover > div.curly-brace, .label_NNPS.tagged-text:hover > div.curly-brace, ul.tagged-text .label_NNS:hover > div.curly-brace, .label_NNS.tagged-text:hover > div.curly-brace, ul.tagged-text .label_NP:hover > div.curly-brace, .label_NP.tagged-text:hover > div.curly-brace, ul.tagged-text .label_NX:hover > div.curly-brace, .label_NX.tagged-text:hover > div.curly-brace, ul.tagged-text
+.label_QP:hover > div.curly-brace,
+.label_QP.tagged-text:hover > div.curly-brace, ul.tagged-text .label_WHNP:hover > div.curly-brace, .label_WHNP.tagged-text:hover > div.curly-brace {
+  color: #1c428f; }
+.label_NN > span.tag:hover, .label_NNP > span.tag:hover, .label_NNPS > span.tag:hover, .label_NNS > span.tag:hover, .label_NP > span.tag:hover, .label_NX > span.tag:hover,
+.label_QP > span.tag:hover, .label_WHNP > span.tag:hover {
+  background: #8face9;
+  border-color: #10254f; }
+
+/*
+ * Prepositions, conjunctions
+ */
+.label_IN > span.tag, .label_TO > span.tag, .label_CONJP > span.tag, .label_PP > span.tag, .label_WHPP > span.tag {
+  color: #000;
+  background: #ffe8be;
+  border-color: #f19c00; }
+.label_IN > div.curly-brace + ul li, .label_TO > div.curly-brace + ul li, .label_CONJP > div.curly-brace + ul li, .label_PP > div.curly-brace + ul li, .label_WHPP > div.curly-brace + ul li {
+  background: rgba(255, 232, 190, 0.4); }
+.label_IN > div.curly-brace, .label_TO > div.curly-brace, .label_CONJP > div.curly-brace, .label_PP > div.curly-brace, .label_WHPP > div.curly-brace {
+  color: #f19c00; }
+ul.tagged-text .label_IN:hover > span.tag, .label_IN.tagged-text:hover > span.tag, ul.tagged-text .label_TO:hover > span.tag, .label_TO.tagged-text:hover > span.tag, ul.tagged-text .label_CONJP:hover > span.tag, .label_CONJP.tagged-text:hover > span.tag, ul.tagged-text .label_PP:hover > span.tag, .label_PP.tagged-text:hover > span.tag, ul.tagged-text .label_WHPP:hover > span.tag, .label_WHPP.tagged-text:hover > span.tag {
+  background: #ffd68b;
+  border-color: #8b5a00; }
+ul.tagged-text .label_IN:hover > div.curly-brace + ul li, .label_IN.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_TO:hover > div.curly-brace + ul li, .label_TO.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_CONJP:hover > div.curly-brace + ul li, .label_CONJP.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_PP:hover > div.curly-brace + ul li, .label_PP.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_WHPP:hover > div.curly-brace + ul li, .label_WHPP.tagged-text:hover > div.curly-brace + ul li {
+  background: rgba(255, 232, 190, 0.6); }
+ul.tagged-text .label_IN:hover > div.curly-brace, .label_IN.tagged-text:hover > div.curly-brace, ul.tagged-text .label_TO:hover > div.curly-brace, .label_TO.tagged-text:hover > div.curly-brace, ul.tagged-text .label_CONJP:hover > div.curly-brace, .label_CONJP.tagged-text:hover > div.curly-brace, ul.tagged-text .label_PP:hover > div.curly-brace, .label_PP.tagged-text:hover > div.curly-brace, ul.tagged-text .label_WHPP:hover > div.curly-brace, .label_WHPP.tagged-text:hover > div.curly-brace {
+  color: #d88b00; }
+.label_IN > span.tag:hover, .label_TO > span.tag:hover, .label_CONJP > span.tag:hover, .label_PP > span.tag:hover, .label_WHPP > span.tag:hover {
+  background: #ffdfa5;
+  border-color: #8b5a00; }
+
+/*
+ * Verbs
+ */
+.label_MD > span.tag, .label_VB > span.tag, .label_VBD > span.tag, .label_VBG > span.tag, .label_VBN > span.tag, .label_VBP > span.tag,
+.label_VBZ > span.tag, .label_VP > span.tag {
+  color: #000;
+  background: #adf6a2;
+  border-color: #28ba12; }
+.label_MD > div.curly-brace + ul li, .label_VB > div.curly-brace + ul li, .label_VBD > div.curly-brace + ul li, .label_VBG > div.curly-brace + ul li, .label_VBN > div.curly-brace + ul li, .label_VBP > div.curly-brace + ul li,
+.label_VBZ > div.curly-brace + ul li, .label_VP > div.curly-brace + ul li {
+  background: rgba(173, 246, 162, 0.4); }
+.label_MD > div.curly-brace, .label_VB > div.curly-brace, .label_VBD > div.curly-brace, .label_VBG > div.curly-brace, .label_VBN > div.curly-brace, .label_VBP > div.curly-brace,
+.label_VBZ > div.curly-brace, .label_VP > div.curly-brace {
+  color: #28ba12; }
+ul.tagged-text .label_MD:hover > span.tag, .label_MD.tagged-text:hover > span.tag, ul.tagged-text .label_VB:hover > span.tag, .label_VB.tagged-text:hover > span.tag, ul.tagged-text .label_VBD:hover > span.tag, .label_VBD.tagged-text:hover > span.tag, ul.tagged-text .label_VBG:hover > span.tag, .label_VBG.tagged-text:hover > span.tag, ul.tagged-text .label_VBN:hover > span.tag, .label_VBN.tagged-text:hover > span.tag, ul.tagged-text .label_VBP:hover > span.tag, .label_VBP.tagged-text:hover > span.tag, ul.tagged-text
+.label_VBZ:hover > span.tag,
+.label_VBZ.tagged-text:hover > span.tag, ul.tagged-text .label_VP:hover > span.tag, .label_VP.tagged-text:hover > span.tag {
+  background: #84f274;
+  border-color: #145d09; }
+ul.tagged-text .label_MD:hover > div.curly-brace + ul li, .label_MD.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_VB:hover > div.curly-brace + ul li, .label_VB.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_VBD:hover > div.curly-brace + ul li, .label_VBD.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_VBG:hover > div.curly-brace + ul li, .label_VBG.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_VBN:hover > div.curly-brace + ul li, .label_VBN.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_VBP:hover > div.curly-brace + ul li, .label_VBP.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text
+.label_VBZ:hover > div.curly-brace + ul li,
+.label_VBZ.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_VP:hover > div.curly-brace + ul li, .label_VP.tagged-text:hover > div.curly-brace + ul li {
+  background: rgba(173, 246, 162, 0.6); }
+ul.tagged-text .label_MD:hover > div.curly-brace, .label_MD.tagged-text:hover > div.curly-brace, ul.tagged-text .label_VB:hover > div.curly-brace, .label_VB.tagged-text:hover > div.curly-brace, ul.tagged-text .label_VBD:hover > div.curly-brace, .label_VBD.tagged-text:hover > div.curly-brace, ul.tagged-text .label_VBG:hover > div.curly-brace, .label_VBG.tagged-text:hover > div.curly-brace, ul.tagged-text .label_VBN:hover > div.curly-brace, .label_VBN.tagged-text:hover > div.curly-brace, ul.tagged-text .label_VBP:hover > div.curly-brace, .label_VBP.tagged-text:hover > div.curly-brace, ul.tagged-text
+.label_VBZ:hover > div.curly-brace,
+.label_VBZ.tagged-text:hover > div.curly-brace, ul.tagged-text .label_VP:hover > div.curly-brace, .label_VP.tagged-text:hover > div.curly-brace {
+  color: #23a310; }
+.label_MD > span.tag:hover, .label_VB > span.tag:hover, .label_VBD > span.tag:hover, .label_VBG > span.tag:hover, .label_VBN > span.tag:hover, .label_VBP > span.tag:hover,
+.label_VBZ > span.tag:hover, .label_VP > span.tag:hover {
+  background: #99f48b;
+  border-color: #145d09; }
+
+/*
+ * Miscellaneous
+ */
+.label_EX > span.tag, .label_FW > span.tag, .label_LS > span.tag, .label_POS > span.tag, .label_RP > span.tag, .label_SYM > span.tag,
+.label_UH > span.tag, .label_DOLLAR > span.tag, .label_INTJ > span.tag, .label_PRT > span.tag {
+  color: #000;
+  background: #e4cbf6;
+  border-color: #8924d1; }
+.label_EX > div.curly-brace + ul li, .label_FW > div.curly-brace + ul li, .label_LS > div.curly-brace + ul li, .label_POS > div.curly-brace + ul li, .label_RP > div.curly-brace + ul li, .label_SYM > div.curly-brace + ul li,
+.label_UH > div.curly-brace + ul li, .label_DOLLAR > div.curly-brace + ul li, .label_INTJ > div.curly-brace + ul li, .label_PRT > div.curly-brace + ul li {
+  background: rgba(228, 203, 246, 0.4); }
+.label_EX > div.curly-brace, .label_FW > div.curly-brace, .label_LS > div.curly-brace, .label_POS > div.curly-brace, .label_RP > div.curly-brace, .label_SYM > div.curly-brace,
+.label_UH > div.curly-brace, .label_DOLLAR > div.curly-brace, .label_INTJ > div.curly-brace, .label_PRT > div.curly-brace {
+  color: #8924d1; }
+ul.tagged-text .label_EX:hover > span.tag, .label_EX.tagged-text:hover > span.tag, ul.tagged-text .label_FW:hover > span.tag, .label_FW.tagged-text:hover > span.tag, ul.tagged-text .label_LS:hover > span.tag, .label_LS.tagged-text:hover > span.tag, ul.tagged-text .label_POS:hover > span.tag, .label_POS.tagged-text:hover > span.tag, ul.tagged-text .label_RP:hover > span.tag, .label_RP.tagged-text:hover > span.tag, ul.tagged-text .label_SYM:hover > span.tag, .label_SYM.tagged-text:hover > span.tag, ul.tagged-text
+.label_UH:hover > span.tag,
+.label_UH.tagged-text:hover > span.tag, ul.tagged-text .label_DOLLAR:hover > span.tag, .label_DOLLAR.tagged-text:hover > span.tag, ul.tagged-text .label_INTJ:hover > span.tag, .label_INTJ.tagged-text:hover > span.tag, ul.tagged-text .label_PRT:hover > span.tag, .label_PRT.tagged-text:hover > span.tag {
+  background: #cda0ee;
+  border-color: #50157a; }
+ul.tagged-text .label_EX:hover > div.curly-brace + ul li, .label_EX.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_FW:hover > div.curly-brace + ul li, .label_FW.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_LS:hover > div.curly-brace + ul li, .label_LS.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_POS:hover > div.curly-brace + ul li, .label_POS.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_RP:hover > div.curly-brace + ul li, .label_RP.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_SYM:hover > div.curly-brace + ul li, .label_SYM.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text
+.label_UH:hover > div.curly-brace + ul li,
+.label_UH.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_DOLLAR:hover > div.curly-brace + ul li, .label_DOLLAR.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_INTJ:hover > div.curly-brace + ul li, .label_INTJ.tagged-text:hover > div.curly-brace + ul li, ul.tagged-text .label_PRT:hover > div.curly-brace + ul li, .label_PRT.tagged-text:hover > div.curly-brace + ul li {
+  background: rgba(228, 203, 246, 0.6); }
+ul.tagged-text .label_EX:hover > div.curly-brace, .label_EX.tagged-text:hover > div.curly-brace, ul.tagged-text .label_FW:hover > div.curly-brace, .label_FW.tagged-text:hover > div.curly-brace, ul.tagged-text .label_LS:hover > div.curly-brace, .label_LS.tagged-text:hover > div.curly-brace, ul.tagged-text .label_POS:hover > div.curly-brace, .label_POS.tagged-text:hover > div.curly-brace, ul.tagged-text .label_RP:hover > div.curly-brace, .label_RP.tagged-text:hover > div.curly-brace, ul.tagged-text .label_SYM:hover > div.curly-brace, .label_SYM.tagged-text:hover > div.curly-brace, ul.tagged-text
+.label_UH:hover > div.curly-brace,
+.label_UH.tagged-text:hover > div.curly-brace, ul.tagged-text .label_DOLLAR:hover > div.curly-brace, .label_DOLLAR.tagged-text:hover > div.curly-brace, ul.tagged-text .label_INTJ:hover > div.curly-brace, .label_INTJ.tagged-text:hover > div.curly-brace, ul.tagged-text .label_PRT:hover > div.curly-brace, .label_PRT.tagged-text:hover > div.curly-brace {
+  color: #7a20bb; }
+.label_EX > span.tag:hover, .label_FW > span.tag:hover, .label_LS > span.tag:hover, .label_POS > span.tag:hover, .label_RP > span.tag:hover, .label_SYM > span.tag:hover,
+.label_UH > span.tag:hover, .label_DOLLAR > span.tag:hover, .label_INTJ > span.tag:hover, .label_PRT > span.tag:hover {
+  background: #d9b5f2;
+  border-color: #50157a; }
+
+.tree li span:hover + ul {
+  /*
+   * Coordination and Punctuation, Clauses
+   */
+  /*
+   * Adjectives and adverbs
+   */
+  /*
+   * Determiners, numbers, pronouns
+   */
+  /*
+   * Nouns, noun phrases
+   */
+  /*
+   * Prepositions, conjunctions
+   */
+  /*
+   * Verbs
+   */
+  /*
+   * Miscellaneous
+   */ }
+  .tree li span:hover + ul .label_CC > span.tag, .tree li span:hover + ul .label_PUNCT > span.tag, .tree li span:hover + ul .label_S > span.tag, .tree li span:hover + ul .label_SBAR > span.tag, .tree li span:hover + ul .label_SBARQ > span.tag, .tree li span:hover + ul .label_SINV > span.tag,
+  .tree li span:hover + ul .label_SQ > span.tag, .tree li span:hover + ul .label_FRAG > span.tag, .tree li span:hover + ul .label_LST > span.tag, .tree li span:hover + ul .label_PRN > span.tag, .tree li span:hover + ul .label_RRC > span.tag, .tree li span:hover + ul .label_UCP > span.tag,
+  .tree li span:hover + ul .label_X > span.tag, .tree li span:hover + ul .label_ROOT > span.tag {
+    background: #cacaca;
+    border-color: #4a4a4a; }
+  .tree li span:hover + ul .label_CC > div.curly-brace + ul li, .tree li span:hover + ul .label_PUNCT > div.curly-brace + ul li, .tree li span:hover + ul .label_S > div.curly-brace + ul li, .tree li span:hover + ul .label_SBAR > div.curly-brace + ul li, .tree li span:hover + ul .label_SBARQ > div.curly-brace + ul li, .tree li span:hover + ul .label_SINV > div.curly-brace + ul li,
+  .tree li span:hover + ul .label_SQ > div.curly-brace + ul li, .tree li span:hover + ul .label_FRAG > div.curly-brace + ul li, .tree li span:hover + ul .label_LST > div.curly-brace + ul li, .tree li span:hover + ul .label_PRN > div.curly-brace + ul li, .tree li span:hover + ul .label_RRC > div.curly-brace + ul li, .tree li span:hover + ul .label_UCP > div.curly-brace + ul li,
+  .tree li span:hover + ul .label_X > div.curly-brace + ul li, .tree li span:hover + ul .label_ROOT > div.curly-brace + ul li {
+    background: rgba(227, 227, 227, 0.6); }
+  .tree li span:hover + ul .label_CC > div.curly-brace, .tree li span:hover + ul .label_PUNCT > div.curly-brace, .tree li span:hover + ul .label_S > div.curly-brace, .tree li span:hover + ul .label_SBAR > div.curly-brace, .tree li span:hover + ul .label_SBARQ > div.curly-brace, .tree li span:hover + ul .label_SINV > div.curly-brace,
+  .tree li span:hover + ul .label_SQ > div.curly-brace, .tree li span:hover + ul .label_FRAG > div.curly-brace, .tree li span:hover + ul .label_LST > div.curly-brace, .tree li span:hover + ul .label_PRN > div.curly-brace, .tree li span:hover + ul .label_RRC > div.curly-brace, .tree li span:hover + ul .label_UCP > div.curly-brace,
+  .tree li span:hover + ul .label_X > div.curly-brace, .tree li span:hover + ul .label_ROOT > div.curly-brace {
+    color: #707070; }
+  .tree li span:hover + ul .label_JJ > span.tag, .tree li span:hover + ul .label_JJR > span.tag, .tree li span:hover + ul .label_JJS > span.tag, .tree li span:hover + ul .label_RB > span.tag, .tree li span:hover + ul .label_RBR > span.tag, .tree li span:hover + ul .label_RBS > span.tag,
+  .tree li span:hover + ul .label_WRB > span.tag, .tree li span:hover + ul .label_ADJP > span.tag, .tree li span:hover + ul .label_ADVP > span.tag, .tree li span:hover + ul .label_WHADJP > span.tag, .tree li span:hover + ul .label_WHADVP > span.tag {
+    background: #fffc75;
+    border-color: #757200; }
+  .tree li span:hover + ul .label_JJ > div.curly-brace + ul li, .tree li span:hover + ul .label_JJR > div.curly-brace + ul li, .tree li span:hover + ul .label_JJS > div.curly-brace + ul li, .tree li span:hover + ul .label_RB > div.curly-brace + ul li, .tree li span:hover + ul .label_RBR > div.curly-brace + ul li, .tree li span:hover + ul .label_RBS > div.curly-brace + ul li,
+  .tree li span:hover + ul .label_WRB > div.curly-brace + ul li, .tree li span:hover + ul .label_ADJP > div.curly-brace + ul li, .tree li span:hover + ul .label_ADVP > div.curly-brace + ul li, .tree li span:hover + ul .label_WHADJP > div.curly-brace + ul li, .tree li span:hover + ul .label_WHADVP > div.curly-brace + ul li {
+    background: rgba(255, 253, 168, 0.6); }
+  .tree li span:hover + ul .label_JJ > div.curly-brace, .tree li span:hover + ul .label_JJR > div.curly-brace, .tree li span:hover + ul .label_JJS > div.curly-brace, .tree li span:hover + ul .label_RB > div.curly-brace, .tree li span:hover + ul .label_RBR > div.curly-brace, .tree li span:hover + ul .label_RBS > div.curly-brace,
+  .tree li span:hover + ul .label_WRB > div.curly-brace, .tree li span:hover + ul .label_ADJP > div.curly-brace, .tree li span:hover + ul .label_ADVP > div.curly-brace, .tree li span:hover + ul .label_WHADJP > div.curly-brace, .tree li span:hover + ul .label_WHADVP > div.curly-brace {
+    color: #c2bd00; }
+  .tree li span:hover + ul .label_DT > span.tag, .tree li span:hover + ul .label_PDT > span.tag, .tree li span:hover + ul .label_WDT > span.tag, .tree li span:hover + ul .label_CD > span.tag, .tree li span:hover + ul .label_PRP > span.tag, .tree li span:hover + ul .label_PRPDOLLAR > span.tag,
+  .tree li span:hover + ul .label_WP > span.tag, .tree li span:hover + ul .label_WPDOLLAR > span.tag {
+    background: #af7ff1;
+    border-color: #320b66; }
+  .tree li span:hover + ul .label_DT > div.curly-brace + ul li, .tree li span:hover + ul .label_PDT > div.curly-brace + ul li, .tree li span:hover + ul .label_WDT > div.curly-brace + ul li, .tree li span:hover + ul .label_CD > div.curly-brace + ul li, .tree li span:hover + ul .label_PRP > div.curly-brace + ul li, .tree li span:hover + ul .label_PRPDOLLAR > div.curly-brace + ul li,
+  .tree li span:hover + ul .label_WP > div.curly-brace + ul li, .tree li span:hover + ul .label_WPDOLLAR > div.curly-brace + ul li {
+    background: rgba(204, 173, 246, 0.6); }
+  .tree li span:hover + ul .label_DT > div.curly-brace, .tree li span:hover + ul .label_PDT > div.curly-brace, .tree li span:hover + ul .label_WDT > div.curly-brace, .tree li span:hover + ul .label_CD > div.curly-brace, .tree li span:hover + ul .label_PRP > div.curly-brace, .tree li span:hover + ul .label_PRPDOLLAR > div.curly-brace,
+  .tree li span:hover + ul .label_WP > div.curly-brace, .tree li span:hover + ul .label_WPDOLLAR > div.curly-brace {
+    color: #5313ab; }
+  .tree li span:hover + ul .label_NN > span.tag, .tree li span:hover + ul .label_NNP > span.tag, .tree li span:hover + ul .label_NNPS > span.tag, .tree li span:hover + ul .label_NNS > span.tag, .tree li span:hover + ul .label_NP > span.tag, .tree li span:hover + ul .label_NX > span.tag,
+  .tree li span:hover + ul .label_QP > span.tag, .tree li span:hover + ul .label_WHNP > span.tag {
+    background: #799de5;
+    border-color: #10254f; }
+  .tree li span:hover + ul .label_NN > div.curly-brace + ul li, .tree li span:hover + ul .label_NNP > div.curly-brace + ul li, .tree li span:hover + ul .label_NNPS > div.curly-brace + ul li, .tree li span:hover + ul .label_NNS > div.curly-brace + ul li, .tree li span:hover + ul .label_NP > div.curly-brace + ul li, .tree li span:hover + ul .label_NX > div.curly-brace + ul li,
+  .tree li span:hover + ul .label_QP > div.curly-brace + ul li, .tree li span:hover + ul .label_WHNP > div.curly-brace + ul li {
+    background: rgba(164, 188, 237, 0.6); }
+  .tree li span:hover + ul .label_NN > div.curly-brace, .tree li span:hover + ul .label_NNP > div.curly-brace, .tree li span:hover + ul .label_NNPS > div.curly-brace, .tree li span:hover + ul .label_NNS > div.curly-brace, .tree li span:hover + ul .label_NP > div.curly-brace, .tree li span:hover + ul .label_NX > div.curly-brace,
+  .tree li span:hover + ul .label_QP > div.curly-brace, .tree li span:hover + ul .label_WHNP > div.curly-brace {
+    color: #1c428f; }
+  .tree li span:hover + ul .label_IN > span.tag, .tree li span:hover + ul .label_TO > span.tag, .tree li span:hover + ul .label_CONJP > span.tag, .tree li span:hover + ul .label_PP > span.tag, .tree li span:hover + ul .label_WHPP > span.tag {
+    background: #ffd68b;
+    border-color: #8b5a00; }
+  .tree li span:hover + ul .label_IN > div.curly-brace + ul li, .tree li span:hover + ul .label_TO > div.curly-brace + ul li, .tree li span:hover + ul .label_CONJP > div.curly-brace + ul li, .tree li span:hover + ul .label_PP > div.curly-brace + ul li, .tree li span:hover + ul .label_WHPP > div.curly-brace + ul li {
+    background: rgba(255, 232, 190, 0.6); }
+  .tree li span:hover + ul .label_IN > div.curly-brace, .tree li span:hover + ul .label_TO > div.curly-brace, .tree li span:hover + ul .label_CONJP > div.curly-brace, .tree li span:hover + ul .label_PP > div.curly-brace, .tree li span:hover + ul .label_WHPP > div.curly-brace {
+    color: #d88b00; }
+  .tree li span:hover + ul .label_MD > span.tag, .tree li span:hover + ul .label_VB > span.tag, .tree li span:hover + ul .label_VBD > span.tag, .tree li span:hover + ul .label_VBG > span.tag, .tree li span:hover + ul .label_VBN > span.tag, .tree li span:hover + ul .label_VBP > span.tag,
+  .tree li span:hover + ul .label_VBZ > span.tag, .tree li span:hover + ul .label_VP > span.tag {
+    background: #84f274;
+    border-color: #145d09; }
+  .tree li span:hover + ul .label_MD > div.curly-brace + ul li, .tree li span:hover + ul .label_VB > div.curly-brace + ul li, .tree li span:hover + ul .label_VBD > div.curly-brace + ul li, .tree li span:hover + ul .label_VBG > div.curly-brace + ul li, .tree li span:hover + ul .label_VBN > div.curly-brace + ul li, .tree li span:hover + ul .label_VBP > div.curly-brace + ul li,
+  .tree li span:hover + ul .label_VBZ > div.curly-brace + ul li, .tree li span:hover + ul .label_VP > div.curly-brace + ul li {
+    background: rgba(173, 246, 162, 0.6); }
+  .tree li span:hover + ul .label_MD > div.curly-brace, .tree li span:hover + ul .label_VB > div.curly-brace, .tree li span:hover + ul .label_VBD > div.curly-brace, .tree li span:hover + ul .label_VBG > div.curly-brace, .tree li span:hover + ul .label_VBN > div.curly-brace, .tree li span:hover + ul .label_VBP > div.curly-brace,
+  .tree li span:hover + ul .label_VBZ > div.curly-brace, .tree li span:hover + ul .label_VP > div.curly-brace {
+    color: #23a310; }
+  .tree li span:hover + ul .label_EX > span.tag, .tree li span:hover + ul .label_FW > span.tag, .tree li span:hover + ul .label_LS > span.tag, .tree li span:hover + ul .label_POS > span.tag, .tree li span:hover + ul .label_RP > span.tag, .tree li span:hover + ul .label_SYM > span.tag,
+  .tree li span:hover + ul .label_UH > span.tag, .tree li span:hover + ul .label_DOLLAR > span.tag, .tree li span:hover + ul .label_INTJ > span.tag, .tree li span:hover + ul .label_PRT > span.tag {
+    background: #cda0ee;
+    border-color: #50157a; }
+  .tree li span:hover + ul .label_EX > div.curly-brace + ul li, .tree li span:hover + ul .label_FW > div.curly-brace + ul li, .tree li span:hover + ul .label_LS > div.curly-brace + ul li, .tree li span:hover + ul .label_POS > div.curly-brace + ul li, .tree li span:hover + ul .label_RP > div.curly-brace + ul li, .tree li span:hover + ul .label_SYM > div.curly-brace + ul li,
+  .tree li span:hover + ul .label_UH > div.curly-brace + ul li, .tree li span:hover + ul .label_DOLLAR > div.curly-brace + ul li, .tree li span:hover + ul .label_INTJ > div.curly-brace + ul li, .tree li span:hover + ul .label_PRT > div.curly-brace + ul li {
+    background: rgba(228, 203, 246, 0.6); }
+  .tree li span:hover + ul .label_EX > div.curly-brace, .tree li span:hover + ul .label_FW > div.curly-brace, .tree li span:hover + ul .label_LS > div.curly-brace, .tree li span:hover + ul .label_POS > div.curly-brace, .tree li span:hover + ul .label_RP > div.curly-brace, .tree li span:hover + ul .label_SYM > div.curly-brace,
+  .tree li span:hover + ul .label_UH > div.curly-brace, .tree li span:hover + ul .label_DOLLAR > div.curly-brace, .tree li span:hover + ul .label_INTJ > div.curly-brace, .tree li span:hover + ul .label_PRT > div.curly-brace {
+    color: #7a20bb; }
+
+/*# sourceMappingURL=tagged-text.css.map */
