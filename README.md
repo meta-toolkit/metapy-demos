@@ -20,11 +20,11 @@ To leave the virtual environment, simply close your terminal or type
 To run the search engine server,
 
 ```bash
-python search_server.py
+python search_server.py config.toml
 ```
 
 To run the NLP demo server,
 
 ```bash
-python nlp_server.py
+python nlp_server.py config.toml
 ```
