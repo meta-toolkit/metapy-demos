@@ -11,7 +11,7 @@ do_search = () ->
   query = $("#query_text").val()
   if query.length != 0
     $("#search_results_list").empty()
-    $.ajax "/search-api",
+    $.ajax "search-api",
       type: "POST"
       contentType: "application/json; charset=utf-8"
       dataType: "json"
