@@ -10,7 +10,7 @@ $ ->
     if input.length > (512 * 1024) # about 512 KB
       input = "Try using a smaller amount of text."
     $("#analyzerOutput").show()
-    $.ajax "/nlp-api",
+    $.ajax "nlp-api",
       type: "POST"
       contentType: "application/json; charset=utf-8"
       dataType: "json"
