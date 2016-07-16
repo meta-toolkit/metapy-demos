@@ -28,14 +28,18 @@ def compile_assets():
         css = sass.compile(filename=infile)
         f.write(css)
 
+def server(config):
+    print('Compiling assets...')
+    compile_assets()
+
+    print('Loading NLP models...')
+    app.nlp = NLP(config)
+
+    return app
+
 if __name__ == '__main__':
     if len(sys.argv) != 2:
         print("Usage: {} config.toml".format(sys.argv[0]))
         sys.exit(1)
 
-    print('Compiling assets...')
-    compile_assets()
-
-    print('Loading NLP models...')
-    app.nlp = NLP(sys.argv[1])
-    app.run(debug=True)
+    server(sys.argv[1]).run(debug=True)

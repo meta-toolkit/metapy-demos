@@ -1,0 +1,64 @@
+#!/bin/bash
+#
+# nlp-app    Startup script for the nlp-app demo
+#
+# chkconfig: 345 80 20
+#
+# description: nlp-app is for running the MeTA NLP demo
+# processname: nlp-app
+#
+### BEGIN INIT INFO
+# Provides:          nlp-app
+# Required-Start: $local_fs $remote_fs $network
+# Required-Stop: $local_fs $remote_fs $network
+# Should-Start: $network
+# Should-Stop: $network
+# Default-Start:        2 3 4 5
+# Default-Stop:         0 1 6
+# Short-Description: start and stop nlp-app
+### END INIT INFO
+
+NAME=nlp-app
+USER=massung1
+APP_SCRIPT=/home/$USER/metapy-demos/contrib/nlp_app.sh
+
+lockfile="/var/lock/subsys/nlp-app"
+
+super() {
+    su - $USER -c "$*"
+}
+
+start() {
+    echo "Starting $NAME"
+    super $APP_SCRIPT start
+    retval=$?
+    [ $retval -eq 0 ] && touch $lockfile
+}
+
+stop() {
+    echo "Stopping $NAME"
+    super $APP_SCRIPT stop
+    rm -f $lockfile
+}
+
+restart() {
+    echo "Restarting $NAME"
+    super $APP_SCRIPT restart
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    restart)
+        restart
+        ;;
+    *)
+        echo "Usage: {start|stop|restart}"
+        exit 1
+        ;;
+esac
+exit $RETVAL
