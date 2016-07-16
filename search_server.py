@@ -23,13 +23,16 @@ def compile_assets():
         js = coffeescript.compile_file(infile)
         f.write(js)
 
+def server(config):
+    print('Compiling assets...')
+    compile_assets()
+
+    app.searcher = Searcher(config)
+    return app
+
 if __name__ == '__main__':
     if len(sys.argv) != 2:
         print("Usage: {} config.toml".format(sys.argv[0]))
         sys.exit(1)
 
-    print('Compiling assets...')
-    compile_assets()
-
-    app.searcher = Searcher(sys.argv[1])
-    app.run(debug=True)
+    server(sys.argv[1]).run(debug=True)
